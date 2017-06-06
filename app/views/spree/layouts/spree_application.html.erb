@@ -26,6 +26,7 @@
         <div id="content" class="columns <%= !content_for?(:sidebar) ? " sixteen" : " twelve omega" %>" data-hook>
           <%= flash_messages %>
           <%= yield %>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         </div>
 
         <%= yield :templates %>

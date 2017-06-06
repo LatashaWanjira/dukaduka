@@ -1,17 +1,16 @@
-$main-color : #a9a9a9;
-$complimentary-color : #845A6D;
-
+$main-color: #a9a9a9;
+$complimentary-color: #845A6D;
 .navbar-default {
-    background-color: $main-color;
+    background-color: rgba($main-color, 0);
     .navbar-brand {
-        color: white;
+        color: black;
     }
     .navbar-brand:hover,
     .navbar-brand:focus {
         color: $complimentary-color;
     }
     .navbar-nav > li > a {
-        color: white;
+        color: black;
     }
     .navbar-nav > li > a:hover,
     .navbar-nav > li > a:focus {
@@ -42,4 +41,9 @@ $complimentary-color : #845A6D;
     border: 0;
     text-transform: uppercase;
     margin: 0;
+}
+
+.navbar-fixed-top.scrolled {
+    background-color: rgba(#FFFFFF, 1);
+    transition: all 500ms linear;
 }

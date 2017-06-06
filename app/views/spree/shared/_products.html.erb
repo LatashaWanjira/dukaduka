@@ -9,7 +9,7 @@
 <% end %>
 <% end %>
 
-<div class="container">
+<div class="container-fluid">
 
   <div data-hook="products_search_results_heading">
     <% if products.empty? %>
@@ -26,7 +26,7 @@
   <% if products.any? %>
   <div id="products" class="inline product-listing row" data-hook>
     <% products.each do |product| %>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-4 col-md-3">
       <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
       <div id="product_<%= product.id %>" class="thumbnail <%= cycle(" alpha", " secondary", " ", " omega secondary", name: " classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
         <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
@@ -38,7 +38,7 @@
           <h4><%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %></h4>
           <!-- make the amount a clickable button using link_to method -->
           <p>
-            <%= link_to url, class: 'btn btn-primary' do%>
+            <%= link_to url do%>
             <!-- helps in making google indexing much  easier  -->
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <span class="price selling" itemprop="price"><%= display_price(product) %></span>

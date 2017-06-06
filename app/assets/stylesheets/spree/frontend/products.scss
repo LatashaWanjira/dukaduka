@@ -1,6 +1,5 @@
-$main-color : #a9a9a9;
-$complimentary-color : #845A6D;
-
+$main-color: #a9a9a9;
+$complimentary-color: #845A6D;
 div.product-image {
     min-height: 100px
 }
@@ -17,4 +16,25 @@ div.product-image {
 
 h2 {
     font-family: cursive;
+}
+
+#products {
+    .col-md-3 {
+        padding: 0;
+        .product-image {
+            border: 1px solid $main-color;
+            padding: 50px;
+            padding-top: 75px;
+            min-height: 250px;
+            max-height: 250px;
+        }
+    }
+    .thumbnail {
+        border: 0;
+        padding: 0;
+    }
+    .price {
+        color: black;
+        font-size: 20px;
+    }
 }

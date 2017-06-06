@@ -23,3 +23,4 @@ disable_steps = (all) ->
 Spree.ready ($) ->
   if ($ '#checkout').is('*')
     disable_steps()
+
